@@ -1,1 +1,2 @@
-# team-MTG
+# team-MTG  
+## An app about the weather.
