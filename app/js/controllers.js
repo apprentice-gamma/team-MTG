@@ -1,4 +1,4 @@
-angular.module('weatherApp').controller("FormController", function(){
+angular.module('app').controller("FormController", function(){
     var vm = this;
     vm.addressInput = '';
     vm.logMe = function(){console.log('You are in the MainController');}
