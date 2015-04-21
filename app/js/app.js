@@ -8,10 +8,16 @@
 	app.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.
 			when('/', {
-				templateUrl: ''
-			})
+				templateUrl: 'partials/main.html'
+			}).
+			when('/form', {
+				templateUrl: 'partials/form.html'
+			}).
+			when('/destination', {
+				templateUrl: 'partials/destination.html'
+			});
 
-	}])
+	}]);
 
 
 	app.controller("testController", ["key", "$http", function(key, $http){
