@@ -1,10 +1,8 @@
-<div>
+<div ng-controller="FormController as form">
 <form>
-	City:<br>
-	<input type = "text" address="city"> <br>
-	State:<br>
-	<input type = "text" address="state">
+	Enter in an Address: <input type="text" class="form-control" ng-model="form.addressInput" /> 
 	<br><br>
-	<input type = "submit" value="Submit">
+	<p>{{form.addressInput}}</p>
+	<input type ="submit" ng-click="form.getCoordinates(form.addressInput)" value="Submit" />
 </form>
 </div>
