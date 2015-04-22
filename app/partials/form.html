@@ -1,8 +1,6 @@
 <div ng-controller="FormController as form">
 <form>
 	Enter in an Address: <input type="text" class="form-control" ng-model="form.addressInput" /> 
-	<br><br>
-	<p>{{form.addressInput}}</p>
 	<input type ="submit" ng-click="form.getCoordinates(form.addressInput)" value="Submit" />
 </form>
 </div>
