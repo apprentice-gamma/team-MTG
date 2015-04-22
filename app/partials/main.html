@@ -1,12 +1,12 @@
 <div id="top"></div>
-<div id="left">
+<div id="left" ng-controller="MainController as main">
   <div class="top-half">
     <div class="image-container">
       <img src="img/sun-cloud.png">
     </div>
     <div class="city-temp">
       <p class="city">CITY</p>
-      <p class="temperature">TP°<span class="fahrenheit">F</span></p>
+      <p class="temperature">{{main.temperature | number :0}}°<span class="fahrenheit">F</span></p>
     </div>
   </div>
 
