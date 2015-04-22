@@ -6,7 +6,7 @@
     </div>
     <div class="city-temp">
       <p class="city">CITY</p>
-      <p class="temperature">{{main.temperature | number :0}}°<span class="fahrenheit">F</span></p>
+      <p class="temperature">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
     </div>
   </div>
 
@@ -14,15 +14,15 @@
     <table class="properties-table">
       <tr>
         <td>Feels Like</td>
-        <td>62°</td>
+        <td>{{main.feelsLike | number:0}}°</td>
       </tr>
       <tr>
         <td>Humidity</td>
-        <td>69%</td>
+        <td>{{main.humidity | number:0}}%</td>
       </tr>
       <tr>
         <td>Wind</td>
-        <td>21sw</td>
+        <td>{{main.windSpeed | number:0}} mph</td>
       </tr>
     </table>
   </div>
