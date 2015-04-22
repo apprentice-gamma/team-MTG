@@ -19,10 +19,9 @@
 
 	}]);
 
-	app.controller('myCoordinates', function($scope){
-  var mysrclat= 0; var mysrclong = 0;  
-  var init = self.setInterval(function(){$scope.getCoord()}, 1000);
-  $scope.getCoord = function($scope) {
+	app.controller('myCoordinates', function(){
+  var mysrclat= 0; var mysrclong = 0;   
+ 	this.init = function() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
                 mysrclat = position.coords.latitude; 
