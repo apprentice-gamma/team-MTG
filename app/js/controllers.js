@@ -4,27 +4,64 @@
     weatherControllers.controller("FormController", function() {
         var vm = this;
         vm.addressInput = '';
-        vm.outsideCoordinates = [];
         vm.geocoder = new google.maps.Geocoder();
-        vm.getCoordinates = function(address, callback) {
-            var coordinates;
-            vm.geocoder.geocode({
-                address: address
-            }, function(results, status) {
-                coords_obj = results[0].geometry.location;
-                coordinates = [String(coords_obj.D), String(coords_obj.k)];
-                var longitude = String(coords_obj.D);
-                var latitude = String(coords_obj.k);
-                vm.outsideCoordinates.push(latitude);
-                vm.outsideCoordinates.push(longitude);
-                console.log(vm.outsideCoordinates + "  outsidecoordinates inside anon function");
+        // vm.getCoordinates = function(address, callback) {
+        //     var coordinates;
+        //     vm.geocoder.geocode({
+        //         address: address
+        //     }, function(results, status) {
+        //         coords_obj = results[0].geometry.location;
+        //         coordinates = [String(coords_obj.D), String(coords_obj.k)];
+        //         console.log(coordinates + "  INSIDE DAMN anon function");
 
-                //console.log(coordinates + "  INSIDE DAMN anon function");
-                
+        //     });
+        //     console.log(coordinates + "  outside of anon function");
+
+        // };
+
+        vm.initialize = function() {
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(40.730885, -73.997383);
+            vm.codeLatLng(function(addr) {
+                console.log(addr);
             });
-            //console.log(coordinates + "  outside of anon function");
-            console.log(vm.outsideCoordinates + "  outsidecoordinates outside anon function");
-        };
+        }
+
+        vm.codeLatLng = function(callback) {
+            var latlng = new google.maps.LatLng(40.730885, -73.997383);
+            if (geocoder) {
+                geocoder.geocode({
+                    'latLng': latlng
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        if (results[1]) {
+                            callback(results[1].formatted_address);
+                        } else {
+                            alert("No results found");
+                        }
+                    } else {
+                        alert("Geocoder failed due to: " + status);
+                    }
+                });
+            }
+        }
+
+
+        // function codeAddress(address, callback) {
+        //     (new google.maps.Geocoder()).geocode({
+        //         'address': address
+        //     }, function(results, status) {
+        //         if (status == google.maps.GeocoderStatus.OK) {
+        //             callback(String(results[0].geometry.location.Ya) + ',' + String(results[0].geometry.location.Za))
+        //         } else {
+        //             callback(status);
+        //         }
+        //     });
+        // }
+
+        // codeAddress("test", function(result) {
+        //     // do stuff with result
+        // });
 
 
         // vm.getTemps = function(key, $http) {
