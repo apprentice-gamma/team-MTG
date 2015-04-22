@@ -17,3 +17,17 @@ services.factory('GoogleGeo', ['$q', function($q) {
     }
   };
 }]);
+
+services.factory('Forecast', ['$q', '$http', 'key', function($q, $http, key) {
+  return {
+    get: function(lat, lng) {
+      var deferred = $q.defer();
+      var rootUrl = 'https://api.forecast.io/forecast/';
+      $http.jsonp(rootUrl + key + '/' + lat + ',' + lng + '?callback=JSON_CALLBACK')
+        .success(function(weatherData) {
+          return deferred.resolve(weatherData);
+        });
+        return deferred.promise;
+    }
+  };
+}]);
