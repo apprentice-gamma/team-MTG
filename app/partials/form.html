@@ -1,4 +1,3 @@
-<div id="top"></div>
 <div id="left" ng-controller="MainController as main">
     <div class="top-half">
         <div class="image-container">
@@ -30,10 +29,11 @@
 <div id="right" ng-controller="DestinationController as destination">
     <div class="top-half">
         <div ng-controller="FormController as form">
-            <form>
-                Enter in an Address:
-                <input type="text" class="form-control" ng-model="form.addressInput" />
-                <input type="submit" ng-click="form.getCoordinates(form.addressInput)" value="Submit" />
+            <form id="form">
+                Enter in an Address: <br><br>
+                <input id="input" type="text" class="form-control" ng-model="form.addressInput" />
+                <div id="submit-button">
+                    <a href="#/destination" ng-click="form.getCoordinates(form.addressInput)" id="submit-text">Submit</a>
             </form>
         </div>
     </div>
