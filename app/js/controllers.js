@@ -1,4 +1,6 @@
-angular.module('app').controller("FormController", ["GoogleGeo", "Forecast", "Geolocation", function(GoogleGeo, Forecast, Geolocation) {
+var weatherControllers = angular.module('weatherControllers', []);
+
+weatherControllers.controller("FormController", ["GoogleGeo", "Forecast", "Geolocation", function(GoogleGeo, Forecast, Geolocation) {
   var vm = this;
 
   Geolocation.get().then(function(coordinates) {
@@ -16,3 +18,14 @@ angular.module('app').controller("FormController", ["GoogleGeo", "Forecast", "Ge
    });
   }
 }]);
+
+
+
+// (function() {
+//     var weatherControllers = angular.module('weatherControllers', []);
+
+//     weatherControllers.controller("FormController", ["GoogleGeo", "Forecast", "Geolocation", function(GoogleGeo, Forecast, Geolocation) {
+        
+
+
+// })();
