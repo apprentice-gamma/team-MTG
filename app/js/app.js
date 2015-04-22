@@ -2,7 +2,8 @@
 	var app = angular.module("app", [
 		'ngRoute', 
 		'ngResource', 
-		'apikey'
+		'apikey',
+    'services'
 	]);
 
 	app.config(['$routeProvider', function($routeProvider) {
@@ -26,7 +27,7 @@
         navigator.geolocation.getCurrentPosition(function (position) {
                 mysrclat = position.coords.latitude; 
                 mysrclong = position.coords.longitude;
-                console.log(mysrclat, mysrclong);
+                // console.log(mysrclat, mysrclong);
         	});   
     		}
 		}
@@ -34,7 +35,7 @@
 
 	app.controller("testController", ["key", "$http", function(key, $http){
 		$http.jsonp("https://api.forecast.io/forecast/"+ key +"/42.332582,-83.045429?callback=JSON_CALLBACK").success(function(data){
-			console.log(data);
+			// console.log(data);
 		});
 
 	}]);
