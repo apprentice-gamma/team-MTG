@@ -31,3 +31,21 @@ services.factory('Forecast', ['$q', '$http', 'key', function($q, $http, key) {
     }
   };
 }]);
+
+services.factory('Geolocation', ['$q', function($q) {
+  return {
+    get: function() {
+      var deferred = $q.defer();
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var coordinates = {
+            lat: String(position.coords.latitude),
+            lng: String(position.coords.longitude)
+          }
+          return deferred.resolve(coordinates);
+        });
+      }
+      return deferred.promise;
+    } 
+  };
+}]);
