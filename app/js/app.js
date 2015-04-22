@@ -3,7 +3,8 @@
 		'ngRoute', 
 		'ngResource', 
 		'apikey',
-    'services'
+    	'services',
+    	'weatherControllers'
 	]);
 
 	app.config(['$routeProvider', function($routeProvider) {
