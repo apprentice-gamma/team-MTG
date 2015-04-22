@@ -41,4 +41,25 @@
 
     }]);
 
+
+    weatherControllers.controller("DestinationController", ["Forecast", "GoogleGeo", function(Forecast, Geolocation) {
+        var vm = this;
+        vm.temperature;
+        vm.feelsLike;
+        vm.humidity;
+        vm.windSpeed;
+
+        GoogleGeo.get(address).then(function(coordinates) {
+            Forecast.get(coordinates.lat, coordinates.lng)
+                .then(function(weather) {
+                    vm.temperature = weather.currently.temperature;
+                    vm.feelsLike = weather.currently.apparentTemperature;
+                    vm.humidity = weather.currently.humidity * 100;
+                    vm.windSpeed = weather.currently.windSpeed;
+                })
+        });
+
+
+    }]);
+
 })();

@@ -1,6 +1,40 @@
-<div ng-controller="FormController as form">
-<form>
-	Enter in an Address: <input type="text" class="form-control" ng-model="form.addressInput" /> 
-	<input type ="submit" ng-click="form.getCoordinates(form.addressInput)" value="Submit" />
-</form>
+<div id="top"></div>
+<div id="left" ng-controller="MainController as main">
+    <div class="top-half">
+        <div class="image-container">
+            <img src="img/sun-cloud.png">
+        </div>
+        <div class="city-temp">
+            <p class="city">CITY</p>
+            <p class="temperature">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
+        </div>
+    </div>
+    <div class="property-container">
+        <table class="properties-table">
+            <tr>
+                <td>Feels Like</td>
+                <td>{{main.feelsLike | number:0}}°</td>
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td>{{main.humidity | number:0}}%</td>
+            </tr>
+            <tr>
+                <td>Wind</td>
+                <td>{{main.windSpeed | number:0}} mph</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="right" ng-controller="DestinationController as destination">
+    <div class="top-half">
+        <div ng-controller="FormController as form">
+            <form>
+                Enter in an Address:
+                <input type="text" class="form-control" ng-model="form.addressInput" />
+                <input type="submit" ng-click="form.getCoordinates(form.addressInput)" value="Submit" />
+            </form>
+        </div>
+    </div>
 </div>
