@@ -33,14 +33,14 @@
     <div class="right-top">
         <table class="hourly-temps-table">
             <tr>
-                <td>{{main.firstHour}}</td>
-                <td class="center-td">3PM</td>
-                <td>4PM</td>
+                <td>{{main.firstHour | date :'h a'}}</td>
+                <td class="center-td">{{main.secondHour | date :'h a'}}</td>
+                <td>{{main.thirdHour | date :'h a'}}</td>
             </tr>
             <tr>
-                <td>66°</td>
-                <td class="center-td">67°</td>
-                <td>71°</td>
+                <td>{{main.firstHourTemp | number:0}}°</td>
+                <td class="center-td">{{main.secondHourTemp | number:0}}°</td>
+                <td>{{main.thirdHourTemp | number:0}}°</td>
             </tr>
         </table>
     </div>

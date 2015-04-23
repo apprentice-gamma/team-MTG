@@ -71,12 +71,12 @@
                     vm.icon = weather.currently.icon;
                     vm.summary = weather.minutely.summary;
                     vm.precipitation = weather.currently.precipProbability;
-                    vm.firstHour = weather.hourly.data[1].time;
-                    vm.secondHour = weather.hourly.data[2].time;
-                    vm.thirdHour = weather.hourly.data[3].time;
-                    vm.firstHourTemp;
-                    vm.secondHourTemp;
-                    vm.thirdHourTemp;
+                    vm.firstHour = weather.hourly.data[1].time * 1000;
+                    vm.secondHour = weather.hourly.data[2].time * 1000;
+                    vm.thirdHour = weather.hourly.data[3].time * 1000;
+                    vm.firstHourTemp = weather.hourly.data[1].temperature;
+                    vm.secondHourTemp = weather.hourly.data[2].temperature;
+                    vm.thirdHourTemp = weather.hourly.data[3].temperature;
                 })
         });
     }]);
