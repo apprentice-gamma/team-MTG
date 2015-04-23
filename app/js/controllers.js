@@ -46,6 +46,7 @@
     vm.humidity;
     vm.windSpeed;
     vm.icon;
+    vm.summary;
 
     Geolocation.get().then(function(coordinates) {
       Forecast.get(coordinates.lat, coordinates.lng)
@@ -55,6 +56,7 @@
           vm.humidity = weather.currently.humidity * 100;
           vm.windSpeed = weather.currently.windSpeed;
           vm.icon = weather.currently.icon;
+          vm.summary = weather.minutely.summary;
         })
     });
   }]);
@@ -66,6 +68,7 @@
     vm.humidity;
     vm.windSpeed;
     vm.icon;
+    vm.summary;
 
     GoogleGeo.get(address).then(function(coordinates) {
       Forecast.get(coordinates.lat, coordinates.lng)
@@ -75,6 +78,7 @@
           vm.humidity = weather.currently.humidity * 100;
           vm.windSpeed = weather.currently.windSpeed;
           vm.icon = weather.currently.icon;
+          vm.summary = weather.minutely.summary;
         })
     });
   }]);
