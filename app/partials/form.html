@@ -5,7 +5,7 @@
             <img src="img/{{main.icon}}.png">
         </div>
         <div class="city-temp">
-            <p class="city">{{ main.city }}</p>
+            <p class="city">Current City: {{ main.city }}</p>
             <p class="temperature">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
         </div>
     </div>
@@ -44,7 +44,7 @@
                 <img src="img/{{form.icon}}.png">
             </div>
             <div class="city-temp">
-                <p class="city">{{ form.city }}</p>
+                <p class="city">Destination: {{ form.city }}</p>
                 <p class="temperature">{{form.temperature | number:0}}°<span class="fahrenheit">F</span></p>
             </div>
         </div>
