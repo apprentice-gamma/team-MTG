@@ -19,13 +19,15 @@
       GoogleGeo.get(address).then(function(coordinates) {
         Forecast.get(coordinates.lat, coordinates.lng)
           .then(function(weather) {
-            vm.temperature = weather.currently.temperature;
+            vm.temperature = Math.floor(weather.currently.temperature);
             vm.feelsLike = weather.currently.apparentTemperature;
             vm.humidity = weather.currently.humidity * 100;
             vm.windSpeed = weather.currently.windSpeed;
             vm.icon = weather.currently.icon;
             vm.summary = weather.minutely.summary;
             vm.precipitation = weather.currently.precipProbability;
+            vm.utterance = new SpeechSynthesisUtterance("For your destination location the temperature is " + vm.temperature + "degrees fahrenheit and the forecast is " + vm.summary);
+            vm.lady = window.speechSynthesis.speak(vm.utterance);
           });
 
         ReverseGeo.get(coordinates).then(function(address) {
@@ -67,7 +69,7 @@
     Geolocation.get().then(function(coordinates) {
       Forecast.get(coordinates.lat, coordinates.lng)
         .then(function(weather) {
-          vm.temperature = weather.currently.temperature;
+          vm.temperature = Math.floor(weather.currently.temperature);
           vm.feelsLike = weather.currently.apparentTemperature;
           vm.humidity = weather.currently.humidity * 100;
           vm.windSpeed = weather.currently.windSpeed;
@@ -80,7 +82,7 @@
           vm.firstHourTemp = weather.hourly.data[1].temperature;
           vm.secondHourTemp = weather.hourly.data[2].temperature;
           vm.thirdHourTemp = weather.hourly.data[3].temperature;
-          vm.utterance = new SpeechSynthesisUtterance("temperature is " + vm.temperature + "fahrenheit and the forecast is " + vm.summary);
+          vm.utterance = new SpeechSynthesisUtterance("For your current location the temperature is " + vm.temperature + "degrees fahrenheit and the forecast is " + vm.summary);
           vm.lady = window.speechSynthesis.speak(vm.utterance);
         });
 
