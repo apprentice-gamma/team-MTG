@@ -71,7 +71,7 @@ img {
 }
 
 .top-half {
-  height: 175px;
+  height: 160px;
   padding-left: 10px;
   padding-top: 5px;
   padding-right: 20px
@@ -113,7 +113,7 @@ img {
   width: 210px;
   height: 45px;
   color: #F4F4F4;
-  margin: 4px auto 0px auto;
+  margin: 10px auto 0px auto;
   padding-top: 4px;
   font-size: 24px;
 }
@@ -198,6 +198,11 @@ img {
   height: 30px;
   font-size: 28px;
   background-color: lightgray; 
+}
+
+.weather {
+  margin-top: 20px;
+  font-size: 100px;
 }
 
 /*td {

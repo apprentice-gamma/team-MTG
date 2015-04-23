@@ -2,7 +2,8 @@
 <div id="left">
     <div class="top-half">
         <div class="image-container">
-            <img src="img/{{main.icon}}.png">
+            <!-- <img src="img/{{main.icon}}.png"> -->
+            <i class="wi wi-{{main.icon}} weather"></i>
         </div>
         <div class="city-temp">
             <p class="city">Current City: {{ main.city }}</p>
@@ -41,7 +42,8 @@
     <div id="right" ng-hide="form.visible">
         <div class="top-half">
             <div class="image-container">
-                <img src="img/{{form.icon}}.png">
+                <!-- <img src="img/{{form.icon}}.png"> -->
+                <i class="wi wi-{{form.icon}} weather"></i>
             </div>
             <div class="city-temp">
                 <p class="city">Destination: {{ form.city }}</p>
