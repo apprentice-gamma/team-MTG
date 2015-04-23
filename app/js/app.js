@@ -1,7 +1,6 @@
 (function() {
 	var app = angular.module("app", [
-		'ngRoute', 
-		'ngResource', 
+		'ngRoute',  
 		'apikey',
     'services',
     'weatherControllers'

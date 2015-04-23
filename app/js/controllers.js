@@ -28,6 +28,8 @@
                         vm.icon = weather.currently.icon;
                         vm.summary = weather.minutely.summary;
                         vm.precipitation = weather.currently.precipProbability;
+                        vm.utterance = new SpeechSynthesisUtterance("temperature is " + vm.temperature + "fahrenheit and the forecast is " + vm.summary);
+                        vm.lady = window.speechSynthesis.speak(vm.utterance);
                     })
             });
         }
@@ -77,6 +79,8 @@
                     vm.firstHourTemp = weather.hourly.data[1].temperature;
                     vm.secondHourTemp = weather.hourly.data[2].temperature;
                     vm.thirdHourTemp = weather.hourly.data[3].temperature;
+                    vm.utterance = new SpeechSynthesisUtterance("temperature is " + vm.temperature + "fahrenheit and the forecast is " + vm.summary);
+                    vm.lady = window.speechSynthesis.speak(vm.utterance);
                 })
         });
     }]);
