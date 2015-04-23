@@ -56,6 +56,12 @@
     vm.icon;
     vm.summary;
     vm.precipitation;
+    vm.firstHour;
+    vm.secondHour;
+    vm.thirdHour;
+    vm.firstHourTemp;
+    vm.secondHourTemp;
+    vm.thirdHourTemp;
     vm.city;
 
     Geolocation.get().then(function(coordinates) {
@@ -68,6 +74,14 @@
           vm.icon = weather.currently.icon;
           vm.summary = weather.minutely.summary;
           vm.precipitation = weather.currently.precipProbability;
+          vm.firstHour = weather.hourly.data[1].time * 1000;
+          vm.secondHour = weather.hourly.data[2].time * 1000;
+          vm.thirdHour = weather.hourly.data[3].time * 1000;
+          vm.firstHourTemp = weather.hourly.data[1].temperature;
+          vm.secondHourTemp = weather.hourly.data[2].temperature;
+          vm.thirdHourTemp = weather.hourly.data[3].temperature;
+          vm.utterance = new SpeechSynthesisUtterance("temperature is " + vm.temperature + "fahrenheit and the forecast is " + vm.summary);
+          vm.lady = window.speechSynthesis.speak(vm.utterance);
         });
 
       ReverseGeo.get(coordinates).then(function(address) {
@@ -81,5 +95,4 @@
       });
     });
   }]);
-
 })();
