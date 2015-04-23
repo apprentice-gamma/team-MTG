@@ -4,26 +4,38 @@
   height: 380px;
   background-color: #F4F4F4;
   padding: 0px;
-  border: 2px solid grey;
+  border-right: 2px solid grey;
+  border-left: 2px solid grey;
+  border-bottom: 2px solid grey;
   font-size: 24px;
 }
 
 #top {
-  text-align: right;
+  font-family: "Helvetica Neue";
   width: 800px;
   height: 40px;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+  border-top: 2px solid grey;
   background-color: #105DAB;
+  color: white;
 }
 
+.summary-text {
+  font-size: 24px;
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+  float: left;
+  padding: 5px 0 0 8px;
+ }
+
 #close {
-  border-left: 2px solid black;
   color: white;
   text-decoration: none;
   font-size: 32px;
-  padding-left: 15px;
-  padding-right: 10px;
+  padding: 1px 10px 0 0;
+  float: right;
 }
 
 #left {
@@ -105,6 +117,10 @@ img {
   margin: 4px auto 0px auto;
   padding-top: 4px;
   font-size: 24px;
+}
+
+.destination-button p {
+  margin: 10px auto 0px auto;
 }
 
 #button-text {
