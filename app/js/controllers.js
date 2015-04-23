@@ -36,15 +36,9 @@
       vm.getCoordinates(vm.addressInput);
       vm.addressInput = "";
     }
-
-    // Geolocation.get().then(function(coordinates) {
-    //   console.log(coordinates);
-    // });
-
-
   }]);
 
-  weatherControllers.controller("MainController", ["Forecast", "Geolocation", function(Forecast, Geolocation) {
+  weatherControllers.controller("MainController", ["Forecast", "Geolocation", "ReverseGeo", function(Forecast, Geolocation, ReverseGeo) {
     var vm = this;
     vm.temperature;
     vm.feelsLike;
@@ -53,6 +47,7 @@
     vm.icon;
     vm.summary;
     vm.precipitation;
+    vm.city;
 
     Geolocation.get().then(function(coordinates) {
       Forecast.get(coordinates.lat, coordinates.lng)
@@ -64,8 +59,24 @@
           vm.icon = weather.currently.icon;
           vm.summary = weather.minutely.summary;
           vm.precipitation = weather.currently.precipProbability;
-        })
-    });
-  }]);
+        });
 
+      ReverseGeo.get(coordinates).then(function(address) {
+        var arrAddress = address[0].address_components;
+        // iterate through address_component array
+        $.each(arrAddress, function (i, address_component) {
+          // console.log("Hello", i, address_component)
+          // console.log(address_component.types[0])
+          if (address_component.types[0] === "locality") {// locality type
+            // console.log("Hello");
+            vm.city = address_component.long_name; 
+          }// here's your town name
+          // return false; // break the loop
+        });
+      });
+    });
+
+  
+  }]);
+// address[1].address_components[0].long_name
 })();

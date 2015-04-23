@@ -18,6 +18,20 @@ services.factory('GoogleGeo', ['$q', function($q) {
   };
 }]);
 
+services.factory('ReverseGeo', ['$q', function($q) {
+  return {
+    get: function(coordinates) {
+      var deferred = $q.defer();
+      var geocoder = new google.maps.Geocoder()
+      var latlng = new google.maps.LatLng(coordinates.lat, coordinates.lng);
+      geocoder.geocode({'latLng': latlng}, function(results, status) {
+        return deferred.resolve(results);
+      })
+      return deferred.promise;
+    }
+  };
+}]);
+
 services.factory('Forecast', ['$q', '$http', 'key', function($q, $http, key) {
   return {
     get: function(lat, lng) {
