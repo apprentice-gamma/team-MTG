@@ -205,6 +205,11 @@ img {
     margin-top: 20px;
     font-size: 100px;
 }
+
+.table-data {
+  text-align: right;
+}
+
 /*td {
   padding: 8px;
 }*/
