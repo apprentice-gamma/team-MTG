@@ -26,47 +26,46 @@
         </table>
     </div>
 </div>
-
 <!-- <div id="right" ng-controller="DestinationController as destination"> -->
-    <div ng-controller="FormController as form">
+<div ng-controller="FormController as form">
     <div class="top-half" ng-show="form.visible">
         <form id="form">
-            Enter in an Address:<br><br>
+            Enter in an Address:
+            <br>
+            <br>
             <input id="input" type="text" class="form-control" ng-model="form.addressInput" />
             <input type="submit" id="submit-button" ng-click="form.toggle()" value="Submit" />
-
         </form>
     </div>
-
-  <div id="right" ng-hide="form.visible">
-  <div class="top-half">
-    <div class="image-container">
-      <img src="img/{{form.icon}}.png">
+    <div id="right" ng-hide="form.visible">
+        <div class="top-half">
+            <div class="image-container">
+                <img src="img/{{form.icon}}.png">
+            </div>
+            <div class="city-temp">
+                <p class="city">CITY</p>
+                <p class="temperature">{{form.temperature | number:0}}°<span class="fahrenheit">F</span></p>
+            </div>
+        </div>
+        <div class="property-container">
+            <table class="properties-table">
+                <tr>
+                    <td>Feels Like</td>
+                    <td>{{form.feelsLike | number:0}}°</td>
+                </tr>
+                <tr>
+                    <td>Humidity</td>
+                    <td>{{form.humidity | number:0}}%</td>
+                </tr>
+                <tr>
+                    <td>Wind</td>
+                    <td>{{form.windSpeed | number:0}} mph</td>
+                </tr>
+            </table>
+        </div>
+        <form class="right-bottom">
+            <input type="submit" class="new-destination-button" ng-click="form.toggle()" value="New Destination" />
+        </form>
     </div>
-    <div class="city-temp">
-      <p class="city">CITY</p>
-      <p class="temperature">{{form.temperature | number:0}}°<span class="fahrenheit">F</span></p>
-    </div>
-  </div>
-
-  <div class="property-container">
-    <table class="properties-table">
-      <tr>
-        <td>Feels Like</td>
-        <td>{{form.feelsLike | number:0}}°</td>
-      </tr>
-      <tr>
-        <td>Humidity</td>
-        <td>{{form.humidity | number:0}}%</td>
-      </tr>
-      <tr>
-        <td>Wind</td>
-        <td>{{form.windSpeed | number:0}} mph</td>
-      </tr>
-    </table>
-  </div>
-</div>
-
-
 </div>
 </div>
