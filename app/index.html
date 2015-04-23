@@ -14,7 +14,8 @@
 	<title>Nimbus</title>
 </head>
 
-<body>
+<body ng-controller="MainController as main">
+	<div id="top">{{main.summary}}<a href="/" id="close">X</a></div>  <!-- may need a custom filter for this to take off periods / caps / punctuation is we want to add anything else to the alert -->
 	<div id="main">
 		<div ng-view></div>
 	</div>

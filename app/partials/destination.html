@@ -1,15 +1,58 @@
-<div class="row clearfix">
-	<div class="col-md-6 column">
-		<img alt="140x140" src="http://lorempixel.com/140/140/" class="pull-left"/>
-	</div>
-	<div class="col-md-6 column">
-		<p>
-			Insert current weather for input location here.
-		</p>
+<div id="left" ng-controller="MainController as main">
+  <div class="top-half">
+    <div class="image-container">
+      <img src="img/sun-cloud.png">
+    </div>
+    <div class="city-temp">
+      <p class="city">CITY</p>
+      <p class="temperature">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
+    </div>
+  </div>
+
+  <div class="property-container">
+    <table class="properties-table">
+      <tr>
+        <td>Feels Like</td>
+        <td>{{main.feelsLike | number:0}}°</td>
+      </tr>
+      <tr>
+        <td>Humidity</td>
+        <td>{{main.humidity | number:0}}%</td>
+      </tr>
+      <tr>
+        <td>Wind</td>
+        <td>{{main.windSpeed | number:0}} mph</td>
+      </tr>
+    </table>
+  </div>
 </div>
-	<div class="row clearfix">
-		<div class="col-md-12 column">
-			 <button type="button" class="btn btn-success pull-right">Choose Another Location</button>
-		</div>
-	</div>
+
+
+<div id="right" ng-controller="DestinationController as destination">
+  <div class="top-half">
+    <div class="image-container">
+      <img src="img/sun-cloud.png">
+    </div>
+    <div class="city-temp">
+      <p class="city">CITY</p>
+      <p class="temperature">{{destination.temperature | number:0}}°<span class="fahrenheit">F</span></p>
+    </div>
+  </div>
+
+  <div class="property-container">
+    <table class="properties-table">
+      <tr>
+        <td>Feels Like</td>
+        <td>{{destination.feelsLike | number:0}}°</td>
+      </tr>
+      <tr>
+        <td>Humidity</td>
+        <td>{{destination.humidity | number:0}}%</td>
+      </tr>
+      <tr>
+        <td>Wind</td>
+        <td>{{destination.windSpeed | number:0}} mph</td>
+      </tr>
+    </table>
+  </div>
 </div>

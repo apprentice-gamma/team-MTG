@@ -1,6 +1,71 @@
-<div ng-controller="FormController as form">
-<form>
-	Enter in an Address: <input type="text" class="form-control" ng-model="form.addressInput" /> 
-	<input type ="submit" ng-click="form.getCoordinates(form.addressInput)" value="Submit" />
-</form>
+<!-- <div id="top" ng-controller="FormController as form">{{form.summary}}<a href="/" id="close">X</a></div>  may need a custom filter for this to take off periods / caps / punctuation is we want to add anything else to the alert -->
+<div id="left" ng-controller="MainController as main">
+    <div class="top-half">
+        <div class="image-container">
+            <img src="img/{{main.icon}}.png">
+        </div>
+        <div class="city-temp">
+            <p class="city">CITY</p>
+            <p class="temperature">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
+        </div>
+    </div>
+    <div class="property-container">
+        <table class="properties-table">
+            <tr>
+                <td>Feels Like</td>
+                <td>{{main.feelsLike | number:0}}°</td>
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td>{{main.humidity | number:0}}%</td>
+            </tr>
+            <tr>
+                <td>Wind</td>
+                <td>{{main.windSpeed | number:0}} mph</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- <div id="right" ng-controller="DestinationController as destination"> -->
+    <div ng-controller="FormController as form">
+    <div class="top-half" ng-show="form.visible">
+        <form id="form">
+            Enter in an Address:<br><br>
+            <input id="input" type="text" class="form-control" ng-model="form.addressInput" />
+            <input type="submit" id="submit-button" ng-click="form.toggle()" value="Submit" />
+        </form>
+    </div>
+
+  <div id="right" ng-hide="form.visible">
+  <div class="top-half">
+    <div class="image-container">
+      <img src="img/{{form.icon}}.png">
+    </div>
+    <div class="city-temp">
+      <p class="city">CITY</p>
+      <p class="temperature">{{form.temperature | number:0}}°<span class="fahrenheit">F</span></p>
+    </div>
+  </div>
+
+  <div class="property-container">
+    <table class="properties-table">
+      <tr>
+        <td>Feels Like</td>
+        <td>{{form.feelsLike | number:0}}°</td>
+      </tr>
+      <tr>
+        <td>Humidity</td>
+        <td>{{form.humidity | number:0}}%</td>
+      </tr>
+      <tr>
+        <td>Wind</td>
+        <td>{{form.windSpeed | number:0}} mph</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+</div>
 </div>
