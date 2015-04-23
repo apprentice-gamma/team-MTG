@@ -13,12 +13,7 @@
         vm.icon;
         vm.summary;
         vm.precipitation;
-        vm.firstHour;
-        vm.secondHour;
-        vm.thirdHour;
-        vm.firstHourTemp;
-        vm.secondHourTemp;
-        vm.thirdHourTemp;
+
 
         vm.getCoordinates = function(address) {
             GoogleGeo.get(address).then(function(coordinates) {
@@ -33,12 +28,6 @@
                         vm.icon = weather.currently.icon;
                         vm.summary = weather.minutely.summary;
                         vm.precipitation = weather.currently.precipProbability;
-                        vm.firstHour;
-                        vm.secondHour;
-                        vm.thirdHour;
-                        vm.firstHourTemp;
-                        vm.secondHourTemp;
-                        vm.thirdHourTemp;
                     })
             });
         }
@@ -65,6 +54,12 @@
         vm.icon;
         vm.summary;
         vm.precipitation;
+        vm.firstHour;
+        vm.secondHour;
+        vm.thirdHour;
+        vm.firstHourTemp;
+        vm.secondHourTemp;
+        vm.thirdHourTemp;
 
         Geolocation.get().then(function(coordinates) {
             Forecast.get(coordinates.lat, coordinates.lng)
@@ -76,6 +71,12 @@
                     vm.icon = weather.currently.icon;
                     vm.summary = weather.minutely.summary;
                     vm.precipitation = weather.currently.precipProbability;
+                    vm.firstHour = weather.hourly.data[1].time;
+                    vm.secondHour = weather.hourly.data[2].time;
+                    vm.thirdHour = weather.hourly.data[3].time;
+                    vm.firstHourTemp;
+                    vm.secondHourTemp;
+                    vm.thirdHourTemp;
                 })
         });
     }]);
