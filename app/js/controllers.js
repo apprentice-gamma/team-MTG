@@ -11,6 +11,8 @@
     vm.humidity;
     vm.windSpeed;
     vm.icon;
+    vm.summary;
+    vm.precipitation;
 
     vm.getCoordinates = function(address) {
       GoogleGeo.get(address).then(function(coordinates) {
@@ -23,6 +25,8 @@
             vm.humidity = weather.currently.humidity * 100;
             vm.windSpeed = weather.currently.windSpeed;
             vm.icon = weather.currently.icon;
+            vm.summary = weather.minutely.summary;
+            vm.precipitation = weather.currently.precipProbability;
           })
       });
     }
@@ -30,6 +34,7 @@
     vm.toggle = function() {
       vm.visible = !vm.visible;
       vm.getCoordinates(vm.addressInput);
+      vm.addressInput = "";
     }
 
     // Geolocation.get().then(function(coordinates) {
@@ -47,6 +52,7 @@
     vm.windSpeed;
     vm.icon;
     vm.summary;
+    vm.precipitation;
 
     Geolocation.get().then(function(coordinates) {
       Forecast.get(coordinates.lat, coordinates.lng)
@@ -57,28 +63,7 @@
           vm.windSpeed = weather.currently.windSpeed;
           vm.icon = weather.currently.icon;
           vm.summary = weather.minutely.summary;
-        })
-    });
-  }]);
-
-  weatherControllers.controller("DestinationController", ["Forecast", "GoogleGeo", function(Forecast, Geolocation) {
-    var vm = this;
-    vm.temperature;
-    vm.feelsLike;
-    vm.humidity;
-    vm.windSpeed;
-    vm.icon;
-    vm.summary;
-
-    GoogleGeo.get(address).then(function(coordinates) {
-      Forecast.get(coordinates.lat, coordinates.lng)
-        .then(function(weather) {
-          vm.temperature = weather.currently.temperature;
-          vm.feelsLike = weather.currently.apparentTemperature;
-          vm.humidity = weather.currently.humidity * 100;
-          vm.windSpeed = weather.currently.windSpeed;
-          vm.icon = weather.currently.icon;
-          vm.summary = weather.minutely.summary;
+          vm.precipitation = weather.currently.precipProbability;
         })
     });
   }]);
