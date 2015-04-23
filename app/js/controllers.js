@@ -10,6 +10,7 @@
     vm.feelsLike;
     vm.humidity;
     vm.windSpeed;
+    vm.icon;
 
     vm.getCoordinates = function(address) {
       GoogleGeo.get(address).then(function(coordinates) {
@@ -21,6 +22,7 @@
             vm.feelsLike = weather.currently.apparentTemperature;
             vm.humidity = weather.currently.humidity * 100;
             vm.windSpeed = weather.currently.windSpeed;
+            vm.icon = weather.currently.icon;
           })
       });
     }
@@ -43,6 +45,7 @@
     vm.feelsLike;
     vm.humidity;
     vm.windSpeed;
+    vm.icon;
 
     Geolocation.get().then(function(coordinates) {
       Forecast.get(coordinates.lat, coordinates.lng)
@@ -51,6 +54,7 @@
           vm.feelsLike = weather.currently.apparentTemperature;
           vm.humidity = weather.currently.humidity * 100;
           vm.windSpeed = weather.currently.windSpeed;
+          vm.icon = weather.currently.icon;
         })
     });
   }]);
@@ -61,6 +65,7 @@
     vm.feelsLike;
     vm.humidity;
     vm.windSpeed;
+    vm.icon;
 
     GoogleGeo.get(address).then(function(coordinates) {
       Forecast.get(coordinates.lat, coordinates.lng)
@@ -69,6 +74,7 @@
           vm.feelsLike = weather.currently.apparentTemperature;
           vm.humidity = weather.currently.humidity * 100;
           vm.windSpeed = weather.currently.windSpeed;
+          vm.icon = weather.currently.icon;
         })
     });
   }]);
