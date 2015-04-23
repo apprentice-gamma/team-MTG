@@ -110,6 +110,17 @@ img {
 
 .destination-button p {
   margin: 10px auto 0px auto;
+
+.new-destination-button {
+  background-color: #105DAB;
+  border-radius: 10px;
+  border: 2px solid black; 
+  width: 210px;
+  height: 40px;
+  color: #F4F4F4;
+  margin: 4px auto 0px auto;
+  padding-top: 4px;
+  font-size: 24px;
 }
 
 #button-text {
