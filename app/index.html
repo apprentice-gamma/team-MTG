@@ -18,11 +18,13 @@
     <title>Nimbus</title>
 </head>
 
-<body ng-controller="MainController as main" ng-hide="main.dataLoading">
+<body ng-controller="MainController as main">
     <!-- may need a custom filter for this to take off periods / caps / punctuation is we want to add anything else to the alert -->
-    <div id="main">
-        <div ng-view></div>
-    </div>
+	    
+	        <div ng-view ng-hide="main.dataLoading"></div>
+	        <div class="load-screen" ng-show="main.dataLoading">
+	        	<img class="spinner" src="img/spiffygif_102x102.gif">
+	        </div>
 </body>
 
 </html>
