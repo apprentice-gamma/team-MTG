@@ -8,6 +8,8 @@
     border-left: 2px solid grey;
     border-bottom: 2px solid grey;
     font-size: 24px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #top {
@@ -216,7 +218,8 @@
 
 #time {
   color: white;
-  font-size: 100px;
+  font-size: 94px;
+  font-family: "Lucida Grande";
   letter-spacing: 5px;
   text-align: right;
   padding-right: 25px;
@@ -226,28 +229,34 @@
 
 #icontop {
   padding-top: 10px;
-  padding-left: 5px;
-  height: 175px;
-  width: 175px;
+  padding-left: 25px;
+  height: 170px;
+  width: 150px;
+}
+
+#image-link {
+  text-decoration: none;
 }
 
 #icontopleft {
-  padding-left: 32px;
+  padding-left: 60px;
   padding-top: 10px;
-  height: 175px;
-  width: 175px;
+  height: 170px;
+  width: 150px;
 }
 
 #iconbottom {
-  padding-top: -10px;
-  padding-left: 5px;  
-  height: 175px;
-  width: 175px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 25px;  
+  height: 170px;
+  width: 150px;
 }
 
 #iconbottomleft {
-  padding-top: 4px;
-  padding-left: 32px;
-  height: 178px;
-  width: 178px;
+  padding-left: 60px;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  height: 170px;
+  width: 150px;
 }
