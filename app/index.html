@@ -18,7 +18,7 @@
     <title>Nimbus</title>
 </head>
 
-<body ng-controller="MainController as main">
+<body ng-controller="MainController as main" ng-hide="main.dataLoading">
     <div id="top">
         <p class="summary-text">Forecast: {{main.summary}}</p>
         <a href="/" id="close">X</a>

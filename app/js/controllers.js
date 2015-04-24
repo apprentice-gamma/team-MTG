@@ -33,10 +33,14 @@
                 ReverseGeo.get(coordinates).then(function(address) {
                     var arrAddress = address[0].address_components;
                     $.each(arrAddress, function(i, address_component) {
-                        if (address_component.types[0] === 'locality') {
-                            vm.city = address_component.long_name;
-                            return;
+                      if (address_component.types[0] === 'locality') {
+                        if (address_component.long_name.length > 15) {
+                          vm.city = address_component.long_name.slice(0, 14) + '...';
+                        } else {
+                          vm.city = address_component.long_name;
                         }
+                          return;
+                      }
                     });
                 });
             });
@@ -66,6 +70,8 @@
         vm.thirdHourTemp;
         vm.city;
 
+        vm.dataLoading = true;
+
         Geolocation.get().then(function(coordinates) {
             Forecast.get(coordinates.lat, coordinates.lng)
                 .then(function(weather) {
@@ -84,13 +90,19 @@
                     vm.thirdHourTemp = weather.hourly.data[3].temperature;
                     vm.utterance = new SpeechSynthesisUtterance("For your current location the temperature is " + vm.temperature + "degrees fahrenheit and the forecast is " + vm.summary);
                     vm.lady = window.speechSynthesis.speak(vm.utterance);
+                }).finally(function() {
+                  vm.dataLoading = false;
                 });
 
             ReverseGeo.get(coordinates).then(function(address) {
                 var arrAddress = address[0].address_components;
                 $.each(arrAddress, function(i, address_component) {
                     if (address_component.types[0] === 'locality') {
+                      if (address_component.long_name.length > 15) {
+                        vm.city = address_component.long_name.slice(0, 14) + '...';
+                      } else {
                         vm.city = address_component.long_name;
+                      }
                         return;
                     }
                 });

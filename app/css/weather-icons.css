@@ -176,7 +176,7 @@
 .wi-night-cloudy-windy:before {
   content: "\f030";
 }
-.wi-partly-cloudy-night:before {
+.wi-night-cloudy:before {
   content: "\f031";
 }
 .wi-night-hail:before {
@@ -386,7 +386,7 @@
 .wi-day-windy:before {
   content: "\f085";
 }
-.wi-night-alt-cloudy:before {
+.wi-partly-cloudy-night:before {
   content: "\f086";
 }
 .wi-up-left:before {
