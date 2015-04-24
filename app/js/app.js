@@ -19,20 +19,4 @@
             templateUrl: 'partials/destination.html'
         });
     }]);
-
-    // vm.open = openModal;
-
-    // function openModal(size) {
-    //     var modalInstance = $modal.open({
-    //         templateUrl: './partials/spinner_modal.html',
-    //         size: size,
-
-    //     });
-
-    //     modalInstance.result.then(function handleModal(selectedItem) {
-    //         $scope.selected = selectedItem;
-    //     }, function modalGone() {
-    //         $log.info('Modal dismissed at: ' + new Date());
-    //     });
-    // }
 })();
