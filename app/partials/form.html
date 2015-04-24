@@ -35,7 +35,7 @@
 <div ng-controller="FormController as form">
     <div class="top-half" ng-show="form.visible">
         <form id="form">
-            <input id="input" type="text" class="form-control" ng-model="form.addressInput" placeholder="Enter Address"/>
+            <input id="input" type="text" class="form-control" ng-model="form.addressInput" placeholder="Enter Address" />
             <input type="submit" id="submit-button" ng-click="form.toggle()" value="Submit" />
         </form>
     </div>
@@ -60,7 +60,7 @@
                     <td>Humidity</td>
                     <td class="table-data">{{form.humidity | number:0}}%</td>
                 </tr>
-                 <tr>
+                <tr>
                     <td>Precipitation</td>
                     <td class="table-data">{{form.precipitation}}%</td>
                 </tr>
