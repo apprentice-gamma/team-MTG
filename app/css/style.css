@@ -8,15 +8,17 @@
     border-left: 2px solid grey;
     border-bottom: 2px solid grey;
     font-size: 24px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #top {
     font-family: "Helvetica Neue";
     width: 800px;
     height: 40px;
-    border-left: 2px solid grey;
-    border-right: 2px solid grey;
-    border-top: 2px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-top: 1px solid grey;
     background-color: #105DAB;
     color: white;
 }
@@ -65,7 +67,6 @@
 }
 
 .top-half {
-    height: 160px;
     padding-left: 10px;
     padding-top: 5px;
     padding-right: 20px
@@ -102,7 +103,6 @@
     width: 210px;
     height: 45px;
     color: #F4F4F4;
-    margin: 10px auto 0px auto;
     padding-top: 4px;
     font-size: 24px;
 }
@@ -207,4 +207,56 @@
 .labels {
   font-size: 18px;
   margin: 0;
+}
+
+/* Dash Stuff */
+#container {
+  background: black;
+  width: 800px;
+  height: 380px;
+}
+
+#time {
+  color: white;
+  font-size: 94px;
+  font-family: "Lucida Grande";
+  letter-spacing: 5px;
+  text-align: right;
+  padding-right: 25px;
+  float: right;
+  display: inline;
+}
+
+#icontop {
+  padding-top: 10px;
+  padding-left: 25px;
+  height: 170px;
+  width: 150px;
+}
+
+#image-link {
+  text-decoration: none;
+}
+
+#icontopleft {
+  padding-left: 60px;
+  padding-top: 10px;
+  height: 170px;
+  width: 150px;
+}
+
+#iconbottom {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 25px;  
+  height: 170px;
+  width: 150px;
+}
+
+#iconbottomleft {
+  padding-left: 60px;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  height: 170px;
+  width: 150px;
 }

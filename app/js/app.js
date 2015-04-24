@@ -1,7 +1,6 @@
 (function() {
     var app = angular.module('app', [
         'ngRoute',
-        'ngResource',
         'apikey',
         'services',
         'weatherControllers'
@@ -17,6 +16,9 @@
         }).
         when('/destination', {
             templateUrl: 'partials/destination.html'
+        }).
+        when('/dash', {
+            templateUrl: 'dash.html'
         });
     }]);
 
