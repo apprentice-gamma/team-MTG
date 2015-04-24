@@ -1,12 +1,10 @@
 <!-- <div id="top" ng-controller="FormController as form">{{form.summary}}<a href="/" id="close">X</a></div>  may need a custom filter for this to take off periods / caps / punctuation is we want to add anything else to the alert -->
 <div id="left">
     <div class="top-half">
-        <div class="image-container">
-            <!-- <img src="img/{{main.icon}}.png"> -->
-            <i class="wi wi-{{main.icon}} weather"></i>
-        </div>
+        <i class="wi wi-{{main.icon}} weather"></i>
         <div class="city-temp">
-            <p class="city">Current City: {{ main.city }}</p>
+            <p class="labels">Current City:</p>
+            <p class="city">{{ main.city }}</p>
             <p class="temperature">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
         </div>
     </div>
@@ -41,12 +39,10 @@
     </div>
     <div id="right" ng-hide="form.visible">
         <div class="top-half">
-            <div class="image-container">
-                <!-- <img src="img/{{form.icon}}.png"> -->
-                <i class="wi wi-{{form.icon}} weather"></i>
-            </div>
+            <i class="wi wi-{{form.icon}} weather"></i>
             <div class="city-temp">
-                <p class="city">Destination: {{ form.city }}</p>
+                <p class="labels">Destination:</p>
+                <p class="city">{{ form.city }}</p>
                 <p class="temperature">{{form.temperature | number:0}}°<span class="fahrenheit">F</span></p>
             </div>
         </div>

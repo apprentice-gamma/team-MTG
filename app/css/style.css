@@ -41,8 +41,6 @@
 #left {
     width: 399px;
     height: 340px;
-    /*border-right: 1px solid black;*/
-    
     float: left;
 }
 
@@ -52,14 +50,9 @@
     float: right;
 }
 
-img {
-    width: 155px;
-    height: 138px;
-}
-
 .city {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     margin: 0;
     display: inline-block;
 }
@@ -78,13 +71,8 @@ img {
     padding-right: 20px
 }
 
-.image-container {
-    margin-top: 15px;
-    float: left;
-}
-
 .city-temp {
-    margin-top: 15px;
+    margin-top: 1px;
     margin-right: 25px;
     float: right;
 }
@@ -209,9 +197,14 @@ img {
 .table-data {
     text-align: right;
 }
-/*td {
-  padding: 8px;
-}*/
-/*table, td {
-  border: 1px solid black;
-}*/
+
+.load_screen {
+  height: 380px;
+  width: 800px;
+  background-color: red;
+}
+
+.labels {
+  font-size: 18px;
+  margin: 0;
+}
