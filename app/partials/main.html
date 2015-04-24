@@ -20,7 +20,7 @@
         <table class="properties-table">
             <tr>
                 <td>Feels Like</td>
-                <td class="table-data">{{main.feelsLike | number:0}}°</td>
+                <td class="table-data">{{main.feelsLike | number:0}}°<span class="little-f">F</span></td>
             </tr>
             <tr>
                 <td>Humidity</td>
@@ -39,6 +39,7 @@
 </div>
 <div id="right">
     <div class="right-top">
+        <p class="hourly-text">Hourly Forecast:</p>
         <table class="hourly-temps-table">
             <tr>
                 <td>{{main.firstHour | date :'h a'}}</td>
@@ -46,9 +47,9 @@
                 <td>{{main.thirdHour | date :'h a'}}</td>
             </tr>
             <tr>
-                <td>{{main.firstHourTemp | number:0}}°</td>
-                <td class="center-td">{{main.secondHourTemp | number:0}}°</td>
-                <td>{{main.thirdHourTemp | number:0}}°</td>
+                <td>{{main.firstHourTemp | number:0}}°<span class="little-f">F</span></td>
+                <td class="center-td">{{main.secondHourTemp | number:0}}°<span class="little-f">F</span></td>
+                <td>{{main.thirdHourTemp | number:0}}°<span class="little-f">F</span></td>
             </tr>
         </table>
     </div>
