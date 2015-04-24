@@ -14,9 +14,9 @@
     font-family: "Helvetica Neue";
     width: 800px;
     height: 40px;
-    border-left: 2px solid grey;
-    border-right: 2px solid grey;
-    border-top: 2px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-top: 1px solid grey;
     background-color: #105DAB;
     color: white;
 }
@@ -65,7 +65,6 @@
 }
 
 .top-half {
-    height: 160px;
     padding-left: 10px;
     padding-top: 5px;
     padding-right: 20px
@@ -102,7 +101,6 @@
     width: 210px;
     height: 45px;
     color: #F4F4F4;
-    margin: 10px auto 0px auto;
     padding-top: 4px;
     font-size: 24px;
 }
@@ -207,4 +205,49 @@
 .labels {
   font-size: 18px;
   margin: 0;
+}
+
+/* Dash Stuff */
+#container {
+  background: black;
+  width: 800px;
+  height: 380px;
+}
+
+#time {
+  color: white;
+  font-size: 100px;
+  letter-spacing: 5px;
+  text-align: right;
+  padding-right: 25px;
+  float: right;
+  display: inline;
+}
+
+#icontop {
+  padding-top: 10px;
+  padding-left: 5px;
+  height: 175px;
+  width: 175px;
+}
+
+#icontopleft {
+  padding-left: 32px;
+  padding-top: 10px;
+  height: 175px;
+  width: 175px;
+}
+
+#iconbottom {
+  padding-top: -10px;
+  padding-left: 5px;  
+  height: 175px;
+  width: 175px;
+}
+
+#iconbottomleft {
+  padding-top: 4px;
+  padding-left: 32px;
+  height: 178px;
+  width: 178px;
 }
