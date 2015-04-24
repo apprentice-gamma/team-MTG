@@ -122,8 +122,13 @@
     padding: 1px;
 }
 
+.hourly-text {
+  width: 267px;
+  margin: 45px 52.5px 0px 78.5px;
+}
+
 .hourly-temps-table {
-    margin: 65px auto 0 auto;
+    margin: 5px auto 0px auto;
     font-weight: bold;
     text-align: center;
     border-collapse: collapse;
@@ -131,6 +136,10 @@
 
 .hourly-temps-table td {
     padding: 0px 15px 0px 10px;
+}
+
+.little-f {
+  font-size: 18px;
 }
 
 .center-td {
