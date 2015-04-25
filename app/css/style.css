@@ -1,10 +1,15 @@
+html {
+  background-image: url(../img/grad.jpg);
+  background-color: black;
+}
+
 #main {
   font-family: "Helvetica Neue";
   width: 800px;
   height: 380px;
   background-color: #F4F4F4;
-  padding: 0px;
-  border: 2px solid grey;
+  margin-top: 125px;
+  border: 2px solid white;
   font-size: 24px;
   margin-right: auto;
   margin-left: auto;
@@ -208,15 +213,16 @@
 }
 
 /* Dash Stuff */
-#container {
+.container {
   background: black;
   width: 800px;
   height: 380px;
+  margin-top: 125px;
   margin-right: auto;
   margin-left: auto;
 }
 
-#time {
+.time {
   color: white;
   font-size: 94px;
   font-family: "Lucida Grande";
@@ -227,7 +233,7 @@
   display: inline;
 }
 
-#icontop {
+.icontop {
   padding-top: 10px;
   padding-left: 25px;
   height: 170px;
@@ -238,14 +244,14 @@
   text-decoration: none;
 }
 
-#icontopleft {
+.icontopleft {
   padding-left: 60px;
   padding-top: 10px;
   height: 170px;
   width: 150px;
 }
 
-#iconbottom {
+.iconbottom {
   padding-top: 8px;
   padding-bottom: 10px;
   padding-left: 25px;  
@@ -253,7 +259,7 @@
   width: 150px;
 }
 
-#iconbottomleft {
+.iconbottomleft {
   padding-left: 60px;
   padding-bottom: 10px;
   padding-top: 8px;
