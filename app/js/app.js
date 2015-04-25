@@ -16,6 +16,9 @@
 		}).
 		when('/dash', {
 			templateUrl: 'dash.html'
+		}).
+		otherwise({
+			redirectTo: '/'
 		});
 	}]);
 })();
