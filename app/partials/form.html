@@ -1,37 +1,36 @@
 <div id="main">
 <div id="top">
-    <p class="summary-text">Forecast: {{main.summary}}</p>
-    <a href="#/dash" id="close">X</a>
+  <p class="summary-text">Forecast is {{main.summary | lowercase}}</p>
+  <a href="#/dash" id="close">X</a>
 </div>
 <div id="left">
-    <div class="top-half">
-        <i class="wi wi-{{main.icon}} weather"></i>
-        <div class="city-temp">
-            <p class="labels">Current City:</p>
-            <p class="city">{{ main.city }}</p>
-            <p class="temperature">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
-        </div>
+  <div class="top-half">
+    <i class="wi wi-{{main.icon}} weather-left"></i><p class="temperature-left">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
+    <div class="city-temp">
+      <p class="labels">Current City:</p>
+      <p class="city">{{ main.city }}</p>
     </div>
+  </div>
     <div class="property-container">
-        <table class="properties-table">
-            <tr>
-                <td>Feels Like</td>
-                <td class="table-data">{{main.feelsLike | number:0}}°<span class="little-f">F</span></td>
-            </tr>
-            <tr>
-                <td>Humidity</td>
-                <td class="table-data">{{main.humidity | number:0}}%</td>
-            </tr>
-            <tr>
-                <td>Precipitation</td>
-                <td class="table-data">{{main.precipitation}}%</td>
-            </tr>
-            <tr>
-                <td>Wind</td>
-                <td class="table-data">{{main.windSpeed | number:0}} mph</td>
-            </tr>
-        </table>
-    </div>
+      <table class="properties-table">
+        <tr>
+          <td>Feels Like</td>
+          <td class="table-data">{{main.feelsLike | number:0}}°<span class="little-f">F</span></td>
+        </tr>
+        <tr>
+          <td>Humidity</td>
+          <td class="table-data">{{main.humidity | number:0}}%</td>
+        </tr>
+        <tr>
+          <td>Wind</td>
+          <td class="table-data">{{main.windSpeed | number:0}} mph</td>
+        </tr>
+        <tr>
+          <td>Precipitation</td>
+          <td class="table-data">{{main.precipitation}}%</td>
+        </tr>
+      </table>
+  </div>
 </div>
 
 <div ng-controller="FormController as form">
@@ -42,12 +41,11 @@
         </form>
     </div>
     <div id="right" ng-hide="form.visible">
-        <div class="top-half">
-            <i class="wi wi-{{form.icon}} weather"></i>
-            <div class="city-temp">
+        <div class="top-half-right">
+            <p class="temperature">{{form.temperature | number:0}}°<span class="fahrenheit">F</span></p><i class="wi wi-{{form.icon}} weather"></i>
+            <div class="city-temp-des">
                 <p class="labels">Destination:</p>
                 <p class="city">{{ form.city }}</p>
-                <p class="temperature">{{form.temperature | number:0}}°<span class="fahrenheit">F</span></p>
             </div>
         </div>
         <div class="property-container">
@@ -61,12 +59,12 @@
                     <td class="table-data">{{form.humidity | number:0}}%</td>
                 </tr>
                 <tr>
-                    <td>Precipitation</td>
-                    <td class="table-data">{{form.precipitation}}%</td>
-                </tr>
-                <tr>
                     <td>Wind</td>
                     <td class="table-data">{{form.windSpeed | number:0}} mph</td>
+                </tr>
+                <tr>
+                    <td>Precipitation</td>
+                    <td class="table-data">{{form.precipitation}}%</td>
                 </tr>
             </table>
         </div>

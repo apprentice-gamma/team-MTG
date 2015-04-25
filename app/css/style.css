@@ -4,10 +4,10 @@ html {
 
 #main {
   font-family: "Helvetica Neue";
+  color: white;
   width: 800px;
   height: 380px;
-  background-color: #F4F4F4;
- /* border: 2px solid gray;*/
+  background-image: url(../img/greenback.gif);
   font-size: 24px;
   margin-top: 100px;
   margin-right: auto;
@@ -16,26 +16,28 @@ html {
 
 #top {
   font-family: "Helvetica Neue";
+  font-weight: 300;
   width: 800px;
-  height: 40px;
-  background-color: #105DAB;
-  color: white;
+  height: 32px;
+  background-color: white;
+  color: lightgray;
+  padding-bottom: 4px;
 }
 
 .summary-text {
   font-size: 24px;
-  padding: 0px;
   margin: 0px;
   display: inline-block;
   float: left;
-  padding: 5px 0 0 8px;
+  padding: 5px 0 0 12px;
 }
 
 #close {
-  color: white;
+  color: gray;
   text-decoration: none;
-  font-size: 32px;
-  padding: 1px 10px 0 0;
+  margin-top: -5px;
+  font-size: 38px;
+  padding: 1px 8px 0 0;
   float: right;
 }
 
@@ -51,38 +53,64 @@ html {
   float: right;
 }
 
-.city {
-  font-weight: bold;
+.labels {
   font-size: 24px;
-  margin: 0;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-top: -15px;
+  margin-bottom: -4px;
+}
+
+.city {
+  font-weight: 250;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-top: -1px;
   display: inline-block;
 }
 
+.temperature-left {
+  font-weight: 100;
+  font-size: 108px;
+  width: 160px;
+  margin-left: 32px;
+  display: inline;
+}
+
 .temperature {
-  font-weight: bold;
-  font-size: 72px;
+  font-weight: 100;
+  font-size: 108px;
   width: 160px;
   margin: 0px;
+  display: inline;
 }
 
 .top-half {
   padding-left: 10px;
-  padding-top: 5px;
   padding-right: 20px;
+  margin-top: -10px;
+}
+
+.top-half-right {
+  padding-left: 10px;
+  padding-right: 20px;
+  margin-top: -15px;
 }
 
 .city-temp {
   margin-top: 1px;
-  margin-right: 25px;
-  float: right;
+  margin-left: 15px;
+  text-align: left;
 }
 
-.property-container {
-  clear: both;
+.city-temp-des {
+  margin-top: 1px;
+  margin-right: 25px;
+  text-align: right;
 }
 
 .fahrenheit {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .destination-button {
@@ -151,12 +179,19 @@ html {
   border-right: 2px solid black;
 }
 
+.property-container {
+  margin-top: -28px;
+  clear: both;
+}
+
 .properties-table {
   margin: auto;
 }
 
 .properties-table td {
-  padding: 0px 15px 3px 6px;
+  padding: 0px 5px 3px 6px;
+  font-weight: lighter;
+  letter-spacing: 2px;
 }
 
 #form {
@@ -167,7 +202,15 @@ html {
 #form input {
   padding: 5px;
   border-radius: 8px;
-  border: 1px solid grey;
+  color: gray;
+}
+
+#input {
+  width: 300px;
+  height: 30px;
+  font-size: 28px;
+  font-weight: 300px;
+  background-color: white;
 }
 
 :focus {
@@ -190,13 +233,6 @@ html {
   text-decoration: none;
 }
 
-#input {
-  width: 300px;
-  height: 30px;
-  font-size: 28px;
-  background-color: lightgray;
-}
-
 #back {
   font-size: 24px;
   background-color: #105DAB; 
@@ -208,17 +244,20 @@ html {
 }
 
 .weather {
-  margin-top: 20px;
-  font-size: 100px;
+  margin-top: 15px;
+  font-size: 70px;
+  font-weight: 200;
+}
+
+.weather-left {
+  margin-top: 15px;
+  margin-left: -20px;
+  font-size: 70px;
+  font-weight: 200;
 }
 
 .table-data {
   text-align: right;
-}
-
-.labels {
-  font-size: 18px;
-  margin: 0;
 }
 
 /* Dash Stuff */
@@ -279,7 +318,7 @@ html {
 .load-screen {
   width: 800px;
   height: 380px;
-  background-color: #F4F4F4;
+  background-image: url(../img/loading-icon.gif);
   padding: 0px;
   margin-top: 100px;
   border: 2px solid gray;
@@ -289,5 +328,5 @@ html {
 
 .spinner {
   display: block;
-  margin: 135px auto 0px auto;
+  margin: 300px auto 0px auto;
 }

@@ -1,15 +1,14 @@
 <div id="main">
 <div id="top">
-    <p class="summary-text">Forecast: {{main.summary}}</p>
+    <p class="summary-text">Forecast is {{main.summary | lowercase}}</p>
     <a href="#/dash" id="close">X</a>
 </div>
 <div id="left">
     <div class="top-half">
-        <i class="wi wi-{{main.icon}} weather"></i>
+        <i class="wi wi-{{main.icon}} weather-left"></i><p class="temperature-left">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
         <div class="city-temp">
             <p class="labels">Current City:</p>
             <p class="city">{{ main.city }}</p>
-            <p class="temperature">{{main.temperature | number:0}}°<span class="fahrenheit">F</span></p>
         </div>
     </div>
     <div class="property-container">
@@ -23,12 +22,12 @@
                 <td class="table-data">{{main.humidity | number:0}}%</td>
             </tr>
             <tr>
-                <td>Precipitation</td>
-                <td class="table-data">{{main.precipitation}}%</td>
-            </tr>
-            <tr>
                 <td>Wind</td>
                 <td class="table-data">{{main.windSpeed | number:0}} mph</td>
+            </tr>
+             <tr>
+                <td>Precipitation</td>
+                <td class="table-data">{{main.precipitation}}%</td>
             </tr>
         </table>
     </div>
