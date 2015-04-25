@@ -212,6 +212,8 @@
   background: black;
   width: 800px;
   height: 380px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #time {
