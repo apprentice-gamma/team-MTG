@@ -197,6 +197,16 @@ html {
   background-color: lightgray;
 }
 
+#back {
+  font-size: 24px;
+  background-color: #105DAB; 
+  color: white; 
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 7px;
+}
+
 .weather {
   margin-top: 20px;
   font-size: 100px;
