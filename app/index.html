@@ -18,7 +18,7 @@
     <title>Nimbus</title>
 </head>
 
-<body class="background" ng-controller="MainController as main">  
+<body ng-controller="MainController as main">  
     <div ng-view ng-hide="main.dataLoading"></div>
     <div class="load-screen" ng-show="main.dataLoading">
       <img class="spinner" src="img/spiffygif_102x102.gif">

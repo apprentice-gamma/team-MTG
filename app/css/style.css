@@ -1,5 +1,5 @@
 html {
-  background-image: url(../img/grad.jpg);
+  background-image: url(../img/dark.jpg);
 }
 
 #main {
@@ -7,9 +7,9 @@ html {
   width: 800px;
   height: 380px;
   background-color: #F4F4F4;
-  margin-top: 100px;
  /* border: 2px solid gray;*/
   font-size: 24px;
+  margin-top: 100px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -271,12 +271,13 @@ html {
   height: 380px;
   background-color: #F4F4F4;
   padding: 0px;
-/*  border: 2px solid gray;*/
+  margin-top: 100px;
+  border: 2px solid gray;
   margin-right: auto;
   margin-left: auto;
 }
 
 .spinner {
   display: block;
-  margin: 235px auto 0px auto;
+  margin: 135px auto 0px auto;
 }
