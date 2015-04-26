@@ -164,7 +164,7 @@ html {
 
 .right-bottom-main {
   text-align: right;
-  margin-top: 34px;
+  margin-top: 10px;
   height: 170px;
   padding: 1px;
 }
@@ -186,6 +186,7 @@ html {
 }
 
 .hourly-text {
+  margin-top: 64px;
   width: 267px;
   letter-spacing: 2px;
 }
@@ -202,18 +203,6 @@ html {
   padding: 0px 15px 0px 15px;
   border-color: white;
   text-align: justify;
-}
-
-.daily-text {
-  margin-top: 10px;
-  width: 267px;
-  letter-spacing: 2px;
-}
-
-.daily {
-  font-weight: lighter;
-  letter-spacing: 1.5px;
-  margin-top: -25px;
 }
 
 .little-f {

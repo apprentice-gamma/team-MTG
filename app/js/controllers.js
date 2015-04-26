@@ -18,7 +18,6 @@
     vm.secondHourTemp;
     vm.thirdHourTemp;
     vm.city;
-    vm.daily;
 
     vm.dataLoading = true;
 
@@ -38,7 +37,6 @@
           vm.firstHourTemp = weather.hourly.data[1].temperature;
           vm.secondHourTemp = weather.hourly.data[2].temperature;
           vm.thirdHourTemp = weather.hourly.data[3].temperature;
-          vm.daily = weather.daily.data[1].summary;
           vm.utterance = new SpeechSynthesisUtterance("For your current location the temperature is " + vm.temperature + "degrees fahrenheit and the forecast is " + vm.summary);
           vm.lady = window.speechSynthesis.speak(vm.utterance);
         }).finally(function() {
