@@ -175,6 +175,7 @@ html {
   background: none;
   border: none;
   box-shadow: none;
+  padding-left: 20px;
 }
 
 #back {
@@ -206,6 +207,7 @@ html {
 }
 
 .little-f {
+  padding-left: 4px;
   font-size: 18px;
 }
 
