@@ -20,7 +20,7 @@ html {
   width: 800px;
   height: 32px;
   background-color: white;
-  color: lightgray;
+  color: gray;
   padding-bottom: 4px;
 }
 
@@ -229,12 +229,12 @@ html {
   margin-top: -8px;
 }
 
-#form {
+/*#form {
   margin-top: 100px;
   text-align: center;
-}
+}*/
 
-#form input {
+.form input {
   padding: 5px;
   border-radius: 8px;
   border: solid white;
@@ -243,7 +243,9 @@ html {
 }
 
 #input {
-  width: 300px;
+  margin-top: 130px;
+  margin-left: 20px;
+  width: 320px;
   height: 30px;
   font-size: 28px;
   font-weight: 300px;
@@ -255,19 +257,19 @@ html {
 }
 
 #submit-button {
-  background-color: none;
-  border-radius: none;
-  border: none;
-  width: 210px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 8px;
+  border: 2px solid white;
+  width: 180px;
   height: 50px;
-  color: #F4F4F4;
-  margin: 50px auto 0px auto;
-  font-size: 24px;
-}
-
-#submit-text {
+  /*margin: 25px auto 0px auto;*/
+  margin-top: 25px;
+  margin-left: 20px;
+  font-size: 28px;
   color: white;
-  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 200
 }
 
 .table-data {
@@ -335,12 +337,12 @@ html {
   background-image: url(../img/loading-icon.gif);
   padding: 0px;
   margin-top: 100px;
-  border: 1px solid white;
+  border: 1px solid #27272E;
   margin-right: auto;
   margin-left: auto;
 }
 
 .spinner {
   display: block;
-  margin: 280px auto 0px auto;
+  margin: 250px auto 0px auto;
 }

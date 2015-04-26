@@ -35,10 +35,10 @@
 
 <div ng-controller="FormController as form">
     <div class="top-half" ng-show="form.visible">
-        <form id="form">
+        <form class="form">
             <input id="input" type="text" ng-model="form.addressInput" placeholder="Enter Address" />
-            <input type="submit" id="submit-button" ng-click="form.toggle()" value="Submit"/>
         </form>
+        <button id="submit-button" type="button" ng-click="form.toggle()" value="submit">Submit</button>
     </div>
     <div id="right" ng-hide="form.visible">
         <div class="top-half-right">
