@@ -53,11 +53,21 @@ html {
   float: right;
 }
 
+.city-temp {
+  margin-left: 15px;
+  text-align: left;
+}
+
+.city-temp-des {
+  margin-right: 12px;
+  text-align: right;
+}
+
 .labels {
   font-size: 24px;
   font-weight: lighter;
   letter-spacing: 2px;
-  margin-top: -15px;
+  margin-top: -5px;
   margin-bottom: -4px;
 }
 
@@ -65,7 +75,7 @@ html {
   font-weight: 250;
   font-size: 32px;
   letter-spacing: 2px;
-  margin-top: -1px;
+  margin-top: 0px;
   display: inline-block;
 }
 
@@ -81,8 +91,24 @@ html {
   font-weight: 100;
   font-size: 108px;
   width: 160px;
-  margin: 0px;
+  margin-left: 50px;
   display: inline;
+}
+
+.weather {
+  margin-top: 10px;
+  font-size: 70px;
+  font-weight: 200;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.weather-left {
+  margin-top: 15px;
+  margin-left: -20px;
+  padding-bottom: 10px;
+  font-size: 70px;
+  font-weight: 200;
 }
 
 .top-half {
@@ -93,53 +119,34 @@ html {
 
 .top-half-right {
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 14px;
   margin-top: -15px;
-}
-
-.city-temp {
-  margin-top: 1px;
-  margin-left: 15px;
-  text-align: left;
-}
-
-.city-temp-des {
-  margin-top: 1px;
-  margin-right: 25px;
-  text-align: right;
 }
 
 .fahrenheit {
   font-size: 30px;
+  margin-right: 6px;
 }
 
 .destination-button {
-  background-color: #105DAB;
+  background-color: none;
   border-radius: 10px;
-  border: 2px solid black;
+  border: 2px solid white;
   width: 210px;
   height: 50px;
   color: #F4F4F4;
   margin: 50px auto 0px auto;
 }
 
-.new-destination-button {
-  background-color: #105DAB;
-  border-radius: 10px;
-  border: 2px solid black;
-  width: 210px;
-  height: 45px;
-  color: #F4F4F4;
-  padding-top: 4px;
-  font-size: 24px;
-}
-
 .destination-button p {
+  text-align: center;
   margin: 10px auto 0px auto;
 }
 
 #button-text {
   color: white;
+  font-weight: 200;
+  letter-spacing: 2px;
   text-decoration: none;
 }
 
@@ -149,25 +156,64 @@ html {
 }
 
 .right-bottom {
-  text-align: center;
+  text-align: right;
+  margin-top: -30px;
   height: 170px;
   padding: 1px;
 }
 
+.right-bottom-main {
+  text-align: right;
+  margin-top: 34px;
+  height: 170px;
+  padding: 1px;
+}
+
+.new-destination-button {
+  color: white;
+  font-size: 56px;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+#back {
+  color: white;
+  font-size: 40px; 
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+}
+
 .hourly-text {
   width: 267px;
-  margin: 45px 52.5px 0px 78.5px;
+  letter-spacing: 2px;
 }
 
 .hourly-temps-table {
-  margin: 5px auto 0px auto;
-  font-weight: bold;
+  margin: -5px auto 0px auto;
+  font-weight: 200;
+  letter-spacing: 1px;
   text-align: center;
   border-collapse: collapse;
 }
 
 .hourly-temps-table td {
-  padding: 0px 15px 0px 10px;
+  padding: 0px 15px 0px 15px;
+  border-color: white;
+  text-align: justify;
+}
+
+.daily-text {
+  margin-top: 10px;
+  width: 267px;
+  letter-spacing: 2px;
+}
+
+.daily {
+  font-weight: lighter;
+  letter-spacing: 1.5px;
+  margin-top: -25px;
 }
 
 .little-f {
@@ -180,7 +226,7 @@ html {
 }
 
 .property-container {
-  margin-top: -28px;
+  margin-top: -34px;
   clear: both;
 }
 
@@ -189,9 +235,9 @@ html {
 }
 
 .properties-table td {
-  padding: 0px 5px 3px 6px;
   font-weight: lighter;
   letter-spacing: 2px;
+  margin-top: -8px;
 }
 
 #form {
@@ -202,6 +248,8 @@ html {
 #form input {
   padding: 5px;
   border-radius: 8px;
+  border: solid white;
+  box-shadow: none;
   color: gray;
 }
 
@@ -218,9 +266,9 @@ html {
 }
 
 #submit-button {
-  background-color: #105DAB;
-  border-radius: 10px;
-  border: 2px solid black;
+  background-color: none;
+  border-radius: none;
+  border: none;
   width: 210px;
   height: 50px;
   color: #F4F4F4;
@@ -231,29 +279,6 @@ html {
 #submit-text {
   color: white;
   text-decoration: none;
-}
-
-#back {
-  font-size: 24px;
-  background-color: #105DAB; 
-  color: white; 
-  text-decoration: none;
-  border-radius: 10px;
-  border: 2px solid black;
-  padding: 7px;
-}
-
-.weather {
-  margin-top: 15px;
-  font-size: 70px;
-  font-weight: 200;
-}
-
-.weather-left {
-  margin-top: 15px;
-  margin-left: -20px;
-  font-size: 70px;
-  font-weight: 200;
 }
 
 .table-data {
@@ -321,12 +346,12 @@ html {
   background-image: url(../img/loading-icon.gif);
   padding: 0px;
   margin-top: 100px;
-  border: 2px solid gray;
+  border: 1px solid white;
   margin-right: auto;
   margin-left: auto;
 }
 
 .spinner {
   display: block;
-  margin: 300px auto 0px auto;
+  margin: 280px auto 0px auto;
 }

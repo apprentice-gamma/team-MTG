@@ -36,8 +36,8 @@
 <div ng-controller="FormController as form">
     <div class="top-half" ng-show="form.visible">
         <form id="form">
-            <input id="input" type="text" class="form-control" ng-model="form.addressInput" placeholder="Enter Address" />
-            <input type="submit" id="submit-button" ng-click="form.toggle()" value="Submit" />
+            <input id="input" type="text" ng-model="form.addressInput" placeholder="Enter Address" />
+            <input type="submit" id="submit-button" ng-click="form.toggle()" value="Submit"/>
         </form>
     </div>
     <div id="right" ng-hide="form.visible">
@@ -69,7 +69,7 @@
             </table>
         </div>
         <form class="right-bottom">
-            <a href="#/" id="back">Back</a> <input type="submit" class="new-destination-button" ng-click="form.toggle()" value="New Destination" />
+            <a href="#/" id="back">&#8634;</a> <input type="submit" class="new-destination-button" ng-click="form.toggle()" value="+" />
         </form>
     </div>
 </div>
