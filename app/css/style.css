@@ -65,7 +65,7 @@ html {
 
 .labels {
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: 300;
   letter-spacing: 2px;
   margin-top: -5px;
   margin-bottom: -4px;
@@ -80,7 +80,7 @@ html {
 }
 
 .temperature-left {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 108px;
   width: 160px;
   margin-left: 32px;
@@ -88,7 +88,7 @@ html {
 }
 
 .temperature {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 108px;
   width: 160px;
   margin-left: 50px;
@@ -100,7 +100,7 @@ html {
   font-size: 70px;
   font-weight: 200;
   padding-bottom: 10px;
-  padding-right: 5px;
+  /*padding-right: 5px;*/
 }
 
 .weather-left {
@@ -141,12 +141,13 @@ html {
 
 .destination-button p {
   text-align: center;
+  font-weight: 300;
   margin: 10px auto 0px auto;
 }
 
 #button-text {
   color: white;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 2px;
   text-decoration: none;
 }
@@ -190,12 +191,14 @@ html {
 .hourly-text {
   margin-top: 64px;
   width: 267px;
+  font-weight: 400;
+  font-size: 30px;
   letter-spacing: 2px;
 }
 
 .hourly-temps-table {
   margin: -5px auto 0px auto;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
   border-collapse: collapse;
@@ -227,7 +230,7 @@ html {
 }
 
 .properties-table td {
-  font-weight: lighter;
+  font-weight: 400;
   letter-spacing: 2px;
   margin-top: -8px;
 }
@@ -272,7 +275,7 @@ html {
   font-size: 28px;
   color: white;
   letter-spacing: 2px;
-  font-weight: 200
+  font-weight: 300
 }
 
 .table-data {
